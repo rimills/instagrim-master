@@ -167,4 +167,45 @@ public class Image extends HttpServlet {
         out.close();
         return;
     }
+    
+    private void DisplayImageComments(int type,String Image, HttpServletResponse response) throws ServletException, IOException {
+        PicModel tm = new PicModel();
+        tm.setCluster(cluster);
+  
+        
+        Pic p = tm.getPic(type,java.util.UUID.fromString(Image));
+        
+        OutputStream out = response.getOutputStream();
+
+        response.setContentType(p.getType());
+        response.setContentLength(p.getLength());
+        //out.write(Image);
+        InputStream is = new ByteArrayInputStream(p.getBytes());
+        BufferedInputStream input = new BufferedInputStream(is);
+        byte[] buffer = new byte[8192];
+        for (int length = 0; (length = input.read(buffer)) > 0;) {
+            out.write(buffer, 0, length);
+        }
+        out.close();
+    }
+    private void DisplayFilteredImage(int type,String Image, HttpServletResponse response) throws ServletException, IOException {
+        PicModel tm = new PicModel();
+        tm.setCluster(cluster);
+  
+        
+        Pic p = tm.getPic(type,java.util.UUID.fromString(Image));
+        
+        OutputStream out = response.getOutputStream();
+
+        response.setContentType(p.getType());
+        response.setContentLength(p.getLength());
+        //out.write(Image);
+        InputStream is = new ByteArrayInputStream(p.getBytes());
+        BufferedInputStream input = new BufferedInputStream(is);
+        byte[] buffer = new byte[8192];
+        for (int length = 0; (length = input.read(buffer)) > 0;) {
+            out.write(buffer, 0, length);
+        }
+        out.close();
+    }
 }
