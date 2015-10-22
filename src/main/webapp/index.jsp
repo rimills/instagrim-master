@@ -37,6 +37,14 @@
                             }else{
                                 %>
                  <li><a href="register.jsp">Register</a></li>
+                 <li><a href="Profile.jsp">View Profile</a></li>
+                    <%
+                        
+                        LoggedIn lgi = (LoggedIn) session.getAttribute("LoggedIn");
+                        if (lgi != null) {
+                            String UserName = lgi.getUsername();
+                            if (lgi.getlogedin()) {
+                    %>
                 <li><a href="login.jsp">Login</a></li>
                 <%
                                         
