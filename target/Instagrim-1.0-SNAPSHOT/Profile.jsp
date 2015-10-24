@@ -38,13 +38,11 @@
         <%
         } else {
             Iterator<Pic> iterator;
-            int Counter;
             
-            Counter = 0;
             iterator = lsPics.iterator();
             while (iterator.hasNext()) {
                 Pic p = (Pic) iterator.next();
-                Counter = Counter + 1;
+                
 
         %>
         <a href="/Instagrim/Image/<%=p.getSUUID()%>" ><img src="/Instagrim/Thumb/<%=p.getSUUID()%>"></a><br/><%

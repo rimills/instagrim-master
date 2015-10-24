@@ -29,7 +29,7 @@
         </nav>
  
         <article>
-            <h1>Your Pics</h1>
+            <h3>Your Pics</h3>
         <%
             java.util.LinkedList<Pic> lsPics = (java.util.LinkedList<Pic>) request.getAttribute("Pics");
             if (lsPics == null) {
@@ -43,7 +43,19 @@
                 Pic p = (Pic) iterator.next();
 
         %>
-        <a href="/Instagrim/Image/<%=p.getSUUID()%>" ><img src="/Instagrim/Thumb/<%=p.getSUUID()%>"></a><br/><%
+        <a href="/Instagrim/Image/<%=p.getSUUID()%>" ><img src="/Instagrim/Thumb/<%=p.getSUUID()%>"></a><br/>
+        <article>
+            <h4>Login</h4>
+            <form method="POST"  action="Make Comment">
+                <ul>
+                    <li>Comment <input type="text" name="username"></li>
+                </ul>
+                <br/>
+                <input type="submit" value="Make Comment"> 
+            </form>
+        </article>
+        
+        <%
 
             }
             }

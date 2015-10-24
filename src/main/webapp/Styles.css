@@ -13,4 +13,12 @@ nav {
     text-align: left;
     border: 2px;
     float: right;
-}
+    background-color: red;
+
+
+    body {
+    text-align: left;
+    border: 2px;
+    float: left;
+    background-color: blue;
+    }
