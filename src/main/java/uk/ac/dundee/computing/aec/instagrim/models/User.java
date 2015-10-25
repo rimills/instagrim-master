@@ -18,7 +18,7 @@ import javax.servlet.annotation.WebServlet;
 import uk.ac.dundee.computing.aec.instagrim.lib.AeSimpleSHA1;
 import uk.ac.dundee.computing.aec.instagrim.stores.Pic;
 
-@WebServlet(urlPatterns = {"/profile/*"})
+@WebServlet(urlPatterns = {"/Profile/*"})
 /**
  *
  * @author Administrator

@@ -13,12 +13,30 @@ nav {
     text-align: left;
     border: 2px;
     float: right;
-    background-color: red;
+    background-color: gray;
+    text-decoration-color: black;
+}
 
-
-    body {
-    text-align: left;
+header {
+    position: absolute;
+    top: 0;
+    text-align: center;
     border: 2px;
-    float: left;
-    background-color: blue;
-    }
+    float: none;
+    background-color: whitesmoke;
+    text-decoration-color: black;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    text-align: right;
+    border: 2px;
+    float: right;
+    background-color: White;
+    text-decoration-color: black;
+}
+    
+
+
+
