@@ -44,11 +44,26 @@
 
         %>
         <a href="/Instagrim/Image/<%=p.getSUUID()%>" ><img src="/Instagrim/Thumb/<%=p.getSUUID()%>"></a><br/>
+        <%
+            java.util.LinkedList<Comment> lsCom = (java.util.LinkedList<Comment>) request.getAttribute("Comments");
+            if (lsCom == null) {
+         %>
+        <p>No Comments for this Picture </p>
+        <%
+            } else {
+                Iterator<Comment> iteratorC;
+                iteratorC = lsCom.iterator();
+                while (iteratorC.hasNext()) {
+                    Comment c = (Comment) iteratorC.next();
+                    <a href = "/Instgrim/Image/Comments/<%=c.getSUUID()%>" ><src = "/Instagrim/Image/Comments/<%=c.getComment()%>"></a>
+                }
+                 
+            }
         <article>
             <h4>Login</h4>
             <form method="POST"  action="Make Comment">
                 <ul>
-                    <li>Comment <input type="text" name="username"></li>
+                    <li>Comment <input type="text" name="comment"></li>
                 </ul>
                 <br/>
                 <input type="submit" value="Make Comment"> 

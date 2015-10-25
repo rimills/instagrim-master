@@ -13,7 +13,7 @@ nav {
     text-align: left;
     border: 2px;
     float: right;
-    background-color: gray;
+    background-color: whitesmoke;
     text-decoration-color: black;
 }
 
@@ -27,6 +27,14 @@ header {
     text-decoration-color: black;
 }
 
+body {
+    position: relative;
+    text-align: center;
+    border: 30px;
+    background-color: whitesmoke;
+    text-decoration-color: red;
+}
+
 footer {
     position: absolute;
     bottom: 0;
@@ -36,7 +44,23 @@ footer {
     background-color: White;
     text-decoration-color: black;
 }
-    
+
+article {
+    position: relative;
+    text-align: right;
+    float: right;
+    background-color: whitesmoke;
+    text-decoration-color: black;
+}
+
+form {
+    position: relative;
+    bottom: auto;
+    text-align: left;
+    text-decoration-color: activecaption;
+
+  
+  
 
 
 
