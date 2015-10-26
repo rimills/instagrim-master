@@ -24,6 +24,7 @@
 
                
                 <li><a href="upload.jsp">Upload</a></li>
+                <li><a href="/Instagrim/Images/majed">Sample Images</a></li>
                 <%
                        LoggedIn lg = (LoggedIn) session.getAttribute("LoggedIn");
                         if (lg != null) {
